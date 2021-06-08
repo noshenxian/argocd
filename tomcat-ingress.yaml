@@ -9,9 +9,9 @@ spec:
   tls:
   - secretName: host.tld.tls
     hosts:
-    - host.tld
+    - tomcat.ucap.com.cn
   rules:
-  - host: host.tld
+  - host: tomcat.ucap.com.cn
     http:
       paths:
       - path: /

@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tomcat-ingress
+  namespace: default
+spec:
+  tls:
+  - secretName: host.tld.tls
+    hosts:
+    - host.tld
+  rules:
+  - host: host.tld
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: tomcat
+          servicePort: 8080
